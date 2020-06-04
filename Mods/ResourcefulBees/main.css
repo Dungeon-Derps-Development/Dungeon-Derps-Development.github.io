@@ -1,0 +1,41 @@
+.info-panel {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5%;
+    width: 70%;
+    margin-left: 15%;
+}
+.info-container {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    padding: 2%;
+    row-gap: 10%;
+}
+.info-container > a {
+    text-align: center;
+    font-size: 30px;
+    height: 75px;
+    background-color: #393f54;
+    color: white;
+    border-radius: 15px;
+    border: #2c3141 solid 5px;
+}
+.updates {
+    text-align: center;
+}
+
+.update-container {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    padding: 2%;
+    row-gap: 10%;
+}
+.update-container > a {
+    text-align: center;
+    font-size: 30px;
+    height: 75px;
+    background-color: #393f54;
+    color: white;
+    border: #2c3141 solid 5px;
+}

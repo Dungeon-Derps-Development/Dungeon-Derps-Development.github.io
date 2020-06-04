@@ -1,0 +1,214 @@
+.editor {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5%;
+    width: 70%;
+    margin-left: 15%;
+}
+.grid-container-editor {
+    display: grid;
+    grid-template-columns: calc(98%/3) calc(98%/3) calc(98%/3);
+    grid-gap: 1%;
+    padding: 1%;
+}
+.grid-container-editor > div {
+    text-align: center;
+    font-size: 30px;
+    height: 40px;
+    padding: 2% 0 2% 0;
+}
+.text-input > input[type="text"], .color-input > input[type="text"], .text-input-with-weight > input[type="text"], .biome-inner > input[type="text"] {
+    color: #BFD2FF;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    background-color: #393f54;
+    border: #2c3141 3px solid;
+}
+.color-input {
+    display: flex;
+    padding: 0;
+}
+.color-input > input[type="text"] {
+    width: calc(100% - 42px);
+    height: 100%;
+}
+.color-input > input[type="color"] {
+    cursor: pointer;
+    width: 42px;
+    height: 40px;
+    border: none;
+    border: 0;
+    padding: 5px;
+    background-color: #393f54;
+}
+input::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input::-webkit-color-swatch {
+	border: none;
+}
+input::-webkit-input-placeholder {
+    color: #7881A1;
+}
+input:-moz-placeholder {
+    color: #7881A1;
+}
+input:-ms-input-placeholder {
+    color: #7881A1;
+}
+input:disabled::-webkit-input-placeholder {
+    color: #5e667e;
+}
+input:disabled:-moz-placeholder {
+    color: #5e667e;
+}
+input:disabled:-ms-input-placeholder {
+    color: #5e667e;
+}
+input[type="text"]:disabled {
+    color: #5e667e;
+}
+.text-input-with-weight{
+    display: flex;
+}
+.text-input-with-weight > input[type="text"] {
+    width: 87.5%;
+}
+.text-input-with-weight > input[type="number"] {
+    width: 12.5%;
+    border: none;
+    padding-left: 5px;
+    background-color: #393f54;
+    color: #7881A1;
+}
+.breeding-inner, .biome-inner, .hive-inner, .color-inner {
+    display: flex;
+    background-color: #393f54;
+    height: 100%;
+}
+.button-input-with-weight > .breeding-inner > input[type="number"] {
+    width: 12.5%;
+    padding-left: 5px;
+    border: none;
+    background-color: #393f54;
+    color: #7881A1;
+}
+.breeding-inner > input[type="number"]:disabled { 
+    color: #5e667e;
+}
+.breeding-inner > p {
+    color: #7881A1;
+    font: 400 13.3333px Arial;
+}
+.breed-checkbox, .spawn-checkbox, .color-checkbox {
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: #2c3141 solid 3px;
+    cursor: pointer;
+}
+.breed-checkbox:hover, .spawn-checkbox:hover, .color-checkbox:hover {
+    background-image: url(./assets/checkmark_hover.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.breed-checkbox:checked,.spawn-checkbox:checked, .color-checkbox:checked {
+    background-image: url(./assets/checkmark.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.breedable-text {
+    text-align: start;
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 5px;
+    width: calc(87.5% - 40px);
+    border-right: #2c3141 solid 3px;
+    height: calc(100% - 1em);
+}
+.biome-inner > input[type="text"] {
+    padding-left: 2%;
+    border-left: none;
+    width: calc(100% - 40px);
+}
+.hive-inner > p { 
+    text-align: start;
+    color: #7881A1;
+    font: 400 13.3333px Arial;
+    padding-left: 11%;
+    width: 80%;
+}
+.hive-inner > input[type="number"] {
+    width: 20%;
+    border: none;
+    border-left: #2c3141 solid 3px;
+    padding-left: 5px;
+    background-color: #393f54;
+    color: #7881A1;
+}
+.select-trait-input > label {
+    position:relative;
+    width: calc(100% - 40px);
+}
+.select-trait-input > label::before {
+    color: #7881A1;
+    content: '➤';
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right: 5px;
+    position: absolute;
+    pointer-events: none;
+}
+.select-trait-input > label > select {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-color: #393f54;
+    color: #7881A1;
+    border: none;
+    padding-left: 10%;
+}
+.select-trait-input {
+    display: flex;
+}
+.select-image {
+    cursor: pointer;
+    width: 40px;
+    background-image: url(./assets/add.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-size: 39px;
+    image-rendering: pixelated;
+    background-color: #393f54;
+    border: #2c3141 solid 3px;
+}
+.select-image:hover {
+    background-image: url(./assets/add_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 39px;
+}
+.color-text {
+    color: #7881A1;
+    font: 400 13.3333px Arial;
+    text-align: start;
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 11%;
+    width: calc(87.5% - 40px);
+    height: calc(100% - 1em);
+}

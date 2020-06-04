@@ -1,0 +1,68 @@
+.grid-container-traits {
+    display: grid;
+    grid-template-columns: calc(98%/3) calc(98%/3) calc(98%/3);
+    grid-gap: 1%;
+    padding: 1%;
+    row-gap: 5%;
+    grid-template-rows: 75px 75px 75px;
+}
+.grid-container-traits > div {
+    font-size: 30px;
+    height: 75px;
+    background-color: #393f54;
+    color: black;
+}
+.trait {
+    background-color: #393f54;
+    display: flex;
+}
+.trait > img {
+    width: 65px;
+    height: 65px;
+    image-rendering: pixelated;
+    border: #2c3141 solid 5px;
+}
+.trait > p {
+    color: #BFD2FF;
+    padding-left: 10%;
+    padding-top: 1.5rem;
+    height: 30px;
+    line-height: 30px;
+    margin-block-start: 0;
+    width: calc(90% - 150px);
+}
+.trait > button {
+    width: 75px;
+    border: none;
+    background-image: url(./assets/remove.png);
+    background-size: 50px;
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-color: transparent;
+    cursor: pointer;
+}
+.trait > button:hover {
+    background-image: url(./assets/remove_hover.png);
+}
+.grid-container-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25%;
+    padding-left: 25%;
+    column-gap: 1%;
+}
+.grid-container-buttons > div {
+    font-size: 30px;
+    height: 75px;
+    border-radius: 15px;
+    background-color: #393f54;
+    border: #2c3141 solid 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.grid-container-buttons > div:hover {
+    border: white solid 5px;
+}

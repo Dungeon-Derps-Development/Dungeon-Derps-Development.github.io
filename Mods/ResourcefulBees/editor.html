@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./editor.css">
+        <link rel="stylesheet" type="text/css" href="./index.css">
+        <link rel="stylesheet" type="text/css" href="./traits.css">
+        <title>
+            Resourceful Bees - Editor
+        </title>
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="./" class="logo"></a>
+            <a href="./editor.html" class="nav-buttons"><p class="nav-buttons-text">Bee Editor</p></a>
+            <a href="https://github.com/Dungeon-Derps-Development/ResourcefulBees/wiki" class="nav-buttons"><p class="nav-buttons-text">Wiki</p></a>
+            <a href="https://github.com/Dungeon-Derps-Development/ResourcefulBees/issues" class="nav-buttons"><p class="nav-buttons-text">Issues</p></a>
+            <a href="https://www.curseforge.com/minecraft/mc-mods/resourceful-bees" class="nav-buttons"><p class="nav-buttons-text">Downloads</p></a>
+        </div>
+        <div class="main">
+            <div class="editor">
+                <div class="head-text">
+                    <br>
+                    <h1>Bee Editor</h1>
+                </div>
+                <div class="grid-container-editor">
+                    <div class="text-input">
+                        <input id="name" type="text" placeholder="Name (Required)"></input>
+                    </div>
+                    <div class="text-input">
+                        <input id="flower" type="text" placeholder="Flower (Required)"></input>
+                    </div>
+                    <div class="button-input-text">
+                        <div class="color-inner">
+                            <input onclick="enableColors()" checked class="color-checkbox" id="beeColored" type="checkbox"></input>
+                            <p class="color-text">Is bee colored (Optional)</p>
+                        </div>
+                    </div>
+                    <div class="color-input">
+                        <input onchange="colorPickerChange(this, 'color-text-primary')" id="color-primary" value="#74bfed" type="color"></input>
+                        <input onchange="colorTextChange(this, 'color-primary')" id="color-text-primary" type="text" placeholder="Primary Color (Required)"></input>
+                    </div>
+                    <div class="color-input">
+                        <input onchange="colorPickerChange(this, 'color-text-secondary')" id="color-secondary" value="#74bfed" type="color"></input>
+                        <input onchange="colorTextChange(this, 'color-secondary')" id="color-text-secondary" type="text" placeholder="Secondary Color (Required)"></input>
+                    </div>
+                    <div class="color-input">
+                        <input onchange="colorPickerChange(this, 'color-text-honeycomb')" id="color-honeycomb" value="#74bfed" type="color"></input>
+                        <input onchange="colorTextChange(this, 'color-honeycomb')" id="color-text-honeycomb" type="text" placeholder="Honeycomb Color (Required)"></input>
+                    </div>
+                    <div class="text-input-with-weight">
+                        <input id="main-output" type="text" placeholder="Main Centrifuge Output (Required)"></input>
+                        <input id="main-output-chance" type="number" step="0.01" value="1.00" max="1"></input>
+                    </div>
+                    <div class="text-input-with-weight">
+                        <input id="second-output" type="text" placeholder="Secondary Centrifuge Output (Optional)"></input>
+                        <input id="second-output-chance" type="number" step="0.01" value="0.2" max="1"></input>
+                    </div>
+                    <div class="text-input-with-weight">
+                        <input id="bottle-output" type="text" placeholder="Bottle Centrifuge Output (Optional)"></input>
+                        <input id="bottle-output-chance" type="number" step="0.01" value="0.25" max="1"></input>
+                    </div>
+                    <div class="button-input-with-weight">
+                        <div class="breeding-inner">
+                            <input class="breed-checkbox" onclick="enableBreeding()" id="breedable" type="checkbox"></input>
+                            <p class="breedable-text">Breedable & Breed Weight (Optional)</p>
+                            <input id="breeding-chance" disabled type="number" step="0.01" value="0.33" max="1"></input>
+                        </div>
+                    </div>
+                    <div class="text-input">
+                        <input id="parent1" type="text" disabled placeholder="Parent 1 (Optionally Required)"></input>
+                    </div>
+                    <div class="text-input">
+                        <input id="parent2" type="text" disabled placeholder="Parent 2 (Optionally Required)"></input>
+                    </div>
+                    <div class="button-input-with-text">
+                        <div class="biome-inner">
+                            <input onclick="enableSpawning()" class="spawn-checkbox" id="spawnInWorld" type="checkbox"></input>
+                            <input id="biome-list" type="text" disabled placeholder="Biome List (Optional)"></input>
+                        </div>
+                    </div>
+                    <div class="number-input-with-text">
+                        <div class="hive-inner">
+                            <p class="hive-time-text">Max Time In Hive (Optional)</p>
+                            <input id="hive-time" type="number" value="2400"></input>
+                        </div>
+                    </div>
+                    <div class="number-input-with-text">
+                        <div class="hive-inner">
+                            <p class="min-hive-time-text">Min Time In Hive (Optional)</p>
+                            <input id="min-hive-time" type="number" value="600"></input>
+                        </div>
+                    </div>
+                    <div class="select-trait-input">
+                        <button class="select-image" onclick="addTrait()"></button>
+                        <label for="traits">
+                            <select name="traits" id="traits">
+                                <option value="none">Add a bee trait:</option>
+                                <option value="ender">Ender</option>
+                                <option value="nether">Nether</option>
+                                <option value="creeper">Creeper</option>
+                                <option value="skeleton">Skeleton</option>
+                                <option value="zom">Zombie</option>
+                                <option value="pigman">Pigman</option>
+                                <option value="wither">Wither</option>
+                                <option value="blaze">Blaze</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="text-input">
+                        <input id="base-block" type="text" placeholder="Base Block (Optional)"></input>
+                    </div>
+                    <div class="text-input">
+                        <input id="mutation-block" type="text" placeholder="Mutation Block (Optional)"></input>
+                    </div>
+                    <div class="text-input">
+                        <input id="base-texture" type="text" placeholder="Base Layer Texture (Optional)"></input>
+                    </div>
+                    <div class="text-input">
+                        <input id="primary-texture" type="text" placeholder="Primary Layer Texture (Optional)"></input>
+                    </div>
+                    <div class="text-input">
+                        <input id="secondary-texture" type="text" placeholder="Secondary Layer Texture (Optional)"></input>
+                    </div>
+                </div>
+                <div class="head-text">
+                    <h1>Bee Traits</h1>
+                </div>
+                <div class="grid-container-traits">
+                </div>
+                <br>
+                <br>
+                <div class="grid-container-buttons">
+                    <div onclick="clearEditor()"><h>Clear</h></div>
+                    <div onclick="writeJson()"><h>Download</h></div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </body>
+    <script src="./index.js"></script>
+</html>
