@@ -98,6 +98,7 @@ function writeJson() {
     var minTimeInHive = document.getElementById("min-hive-time")
     var baseBlock = document.getElementById("base-block")
     var mutationBlock = document.getElementById("mutation-block")
+    var sizeMod = document.getElementById("size-mod")
 
     /** Texturing **/
     var baseTexture = document.getElementById("base-texture")
@@ -116,6 +117,7 @@ function writeJson() {
         obj.maxTimeInHive = timeInHive.value;
         obj.minTimeInHive = minTimeInHive.value;
         obj.isBeeColored = beeColored.checked;
+        obj.sizeModifier = sizeMod.value;
 
 
         if (secondCentrifuge.value !== "") {obj.secondaryOutput = secondCentrifuge.value;}
@@ -209,6 +211,7 @@ function clearEditor() {
     document.getElementById("hive-time").value = document.getElementById("hive-time").defaultValue;
     document.getElementById("base-block").value =""
     document.getElementById("mutation-block").value =""
+    document.getElementById("size-mod").value = document.getElementById("size-mod").defaultValue;
 
     /** Texturing **/
     document.getElementById("base-texture").value =""

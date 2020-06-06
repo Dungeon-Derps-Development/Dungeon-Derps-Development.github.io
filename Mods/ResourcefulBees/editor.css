@@ -82,7 +82,7 @@ input[type="text"]:disabled {
     background-color: #393f54;
     color: #7881A1;
 }
-.breeding-inner, .biome-inner, .hive-inner, .color-inner {
+.breeding-inner, .biome-inner, .hive-inner, .color-inner, .size-inner {
     display: flex;
     background-color: #393f54;
     height: 100%;
@@ -138,14 +138,14 @@ input[type="text"]:disabled {
     border-left: none;
     width: calc(100% - 40px);
 }
-.hive-inner > p { 
+.hive-inner > p, .size-inner > p { 
     text-align: start;
     color: #7881A1;
     font: 400 13.3333px Arial;
     padding-left: 11%;
     width: 80%;
 }
-.hive-inner > input[type="number"] {
+.hive-inner > input[type="number"], .size-inner > input[type="number"] {
     width: 20%;
     border: none;
     border-left: #2c3141 solid 3px;
