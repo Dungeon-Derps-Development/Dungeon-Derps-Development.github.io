@@ -33,6 +33,7 @@ body {
     text-align: center;
     color: white;
     cursor: pointer;
+    padding: 0 25px 0 25px;
     text-decoration: none;
 }
 .nav-buttons:hover{

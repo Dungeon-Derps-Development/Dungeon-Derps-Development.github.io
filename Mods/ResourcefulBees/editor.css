@@ -159,7 +159,7 @@ input[type="text"]:disabled {
 }
 .select-trait-input > label::before {
     color: #7881A1;
-    content: '➤';
+    content: '\27A4';
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
     -ms-transform:rotate(90deg);
@@ -211,4 +211,30 @@ input[type="text"]:disabled {
     padding-left: 11%;
     width: calc(87.5% - 40px);
     height: calc(100% - 1em);
+}
+.error {
+    display: none;
+}
+
+@media screen and (max-width:1500px) {
+    .editor{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .editor{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .editor {
+        display: none;
+    }
+    .error {
+        display: initial;
+    }
 }
