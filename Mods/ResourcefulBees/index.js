@@ -188,6 +188,9 @@ function clearEditor() {
     document.getElementById("breedable").checked = false;
     document.getElementById("parent1").value =""
     document.getElementById("parent2").value =""
+    document.getElementById("parent1").setAttribute("disabled", true)
+    document.getElementById("parent2").setAttribute("disabled", true)
+    document.getElementById("breeding-chance").setAttribute("disabled", true)
     document.getElementById("breeding-chance").value = document.getElementById("breeding-chance").defaultValue;
 
     /** Coloring **/
@@ -202,6 +205,7 @@ function clearEditor() {
     /** World **/
     document.getElementById("spawnInWorld").checked = false;
     document.getElementById("biome-list").value =""
+    document.getElementById("biome-list").setAttribute("disabled", true)
     document.getElementById("hive-time").value = document.getElementById("hive-time").defaultValue;
     document.getElementById("base-block").value =""
     document.getElementById("mutation-block").value =""
