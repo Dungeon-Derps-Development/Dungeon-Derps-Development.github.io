@@ -49,8 +49,10 @@ function enableBreeding() {
 }
 
 function enableSpawning() {
-    var biomeList = document.getElementById("biome-list")
+    var biomeList = document.getElementById("biome-whitelist")
+    var biomeList2 = document.getElementById("biome-blacklist")
     biomeList.toggleAttribute("disabled")
+    biomeList2.toggleAttribute("disabled")
 }
 
 function colorPickerChange(picker, color_text) {
@@ -93,7 +95,8 @@ function writeJson() {
 
     /** World **/
     var spawnsInWorld = document.getElementById("spawnInWorld")
-    var biomeList = document.getElementById("biome-list")
+    var biomeList = document.getElementById("biome-whitelist")
+    var biomeList2 = document.getElementById("biome-blacklist")
     var timeInHive = document.getElementById("hive-time")
     var minTimeInHive = document.getElementById("min-hive-time")
     var baseBlock = document.getElementById("base-block")
@@ -139,7 +142,8 @@ function writeJson() {
         }
         if (spawnsInWorld.checked) {
             obj.spawnInWorld = true;
-            obj.biomeList = biomeList.value;
+            obj.biomeWhitelist = biomeList.value;
+            obj.biomeBlacklist = biomeList2.value;
         }
         if (baseBlock.value !== "" && mutationBlock.value !== "") {
             obj.mutationInput = baseBlock.value;
@@ -206,7 +210,8 @@ function clearEditor() {
 
     /** World **/
     document.getElementById("spawnInWorld").checked = false;
-    document.getElementById("biome-list").value =""
+    document.getElementById("biome-whitelist").value =""
+    document.getElementById("biome-blacklist").value =""
     document.getElementById("biome-list").setAttribute("disabled", true)
     document.getElementById("hive-time").value = document.getElementById("hive-time").defaultValue;
     document.getElementById("base-block").value =""
