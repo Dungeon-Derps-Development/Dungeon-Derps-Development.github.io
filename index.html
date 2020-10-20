@@ -9,23 +9,31 @@
     <script src="https://kit.fontawesome.com/a97d560ab6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="dd-container ">
-        <h2>Dungeon Derps Development</h2>
-    </div>
-    <div class="dd-bar dd-theme">
+    <nav class="dd-sidebar dd-bar-block dd-card dd-animate-left dd-center" style="display:none" id="mySidebar">
+        <h1 class="dd-xxxlarge dd-text-theme">Side Navigation</h1>
+        <button class="dd-bar-item dd-button" onclick="dd_close()">Close <i class="fas fa-remove"></i></button>
         <a href="#" class="dd-bar-item dd-button dd-padding-16">Modpacks</a>
-        <a href="#" class="dd-bar-item dd-button dd-padding-16">Mods</a>
-        <a href="#" class="dd-bar-item dd-button dd-padding-16">Videos</a>
+        <a href="mods/" class="dd-bar-item dd-button dd-padding-16">Mods</a>
+        <a href="creators/" class="dd-bar-item dd-button dd-padding-16">Creator Hub</a>
+        <a href="#" class="dd-bar-item dd-button dd-padding-16">Esports</a>
+        <a href="issues/" class="dd-bar-item dd-button dd-padding-16">Issues</a>
         <a href="#" class="dd-bar-item dd-button dd-padding-16">About</a>
-    </div>
+    </nav>
+    <header class="dd-container dd-theme dd-padding" id="myHeader">
+        <i onclick="dd_open()" class="fas fa-bars dd-xlarge dd-button dd-theme"></i>
+        <div class="dd-center">
+            <h1 class="dd-xxxlarge dd-animate-bottom" href="https://dungeonderps.dev/">DUNGEON DERPS DEVELOPMENT</h1>
+            <h4>Development Done by Derps.</h4>
+        </div>
+    </header>
     <div class="dd-row-padding dd-center dd-margin-top">
         <div class="dd-third">
             <div class="dd-card dd-container">
                 <h3>Mods and Modpacks</h3><br>
                 <i class="fas fa-wrench dd-margin-top dd-text-theme" style="font-size:120px"></i>
-                <p>text</p>
-                <p>goes</p>
-                <p>here</p>
+                <p>We make fun</p>
+                <p>mods and modpacks</p>
+                <p>for Minecraft</p>
             </div>
         </div>
         <div class="dd-third">
@@ -47,5 +55,17 @@
             </div>
         </div>
     </div>
+<script>
+    function dd_open() {
+        let x = document.getElementById("mySidebar");
+        x.style.width = "100%";
+        x.style.fontSize = "40px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+    }
+    function dd_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
 </body>
 </html>
