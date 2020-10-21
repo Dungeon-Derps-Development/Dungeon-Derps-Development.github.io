@@ -1062,6 +1062,13 @@ a{
 .dd-right{
     float:right!important
 }
+.dd-ul-vertical{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #000;
+}
 .dd-button:hover{
     color:#000!important;
     background-color:#ccc!important
